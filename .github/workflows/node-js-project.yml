@@ -1,0 +1,20 @@
+name: Nodejs CI
+on : [push]
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps: 
+            # Step 1
+            - name: Checkout repository
+              uses: actions/checkout@v5
+            # Step 2
+            - name: Set up Node JS
+              uses: actions/setup-node@v5
+              with:
+                node-version: 18
+            # Step 3
+            - name: Install Dependencties
+              run: npm install
+            # Step 4
+            - name: Run Tests
+              run: npm test

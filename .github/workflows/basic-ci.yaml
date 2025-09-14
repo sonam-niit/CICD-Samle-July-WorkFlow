@@ -9,5 +9,9 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - name: Say Hello
-              run: echo "Hello From CI Pipeline"
+            - name: Build Stage
+              run: echo "Application build successfully"
+            - name: Test Stage
+              run: echo "Test Cases passed"
+            - name: Build deploy
+              run: echo "Application deplyed successfully"

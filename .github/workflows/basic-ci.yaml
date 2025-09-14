@@ -1,0 +1,13 @@
+name: Basic CI Pipeline
+
+# Trigger this pipeline on every push
+
+on: [push]
+
+jobs:
+    builds:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Say Hello
+              run: echo "Hello From CI Pipeline"
